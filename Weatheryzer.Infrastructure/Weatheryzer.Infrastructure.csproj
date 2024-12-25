@@ -8,6 +8,11 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Weatheryzer.Domain\Weatheryzer.Domain.csproj" />
+      <ProjectReference Include="..\Weatheryzer.Shared\Weatheryzer.Shared.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.2" />
     </ItemGroup>
 
 </Project>
