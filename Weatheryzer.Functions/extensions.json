@@ -1,0 +1,9 @@
+{
+  "extensions": [
+    {
+      "name": "AzureStorage",
+      "type": "extensionBundle",
+      "version": "[4.*, 5.0.0)"
+    }
+  ]
+}

@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weatheryzer.Shared", "Weath
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weatheryzer.Tests", "Weatheryzer.Tests\Weatheryzer.Tests.csproj", "{EE7C7FB1-42F8-4818-85D4-0D6375E5DDEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weatheryzer.Function", "Weatheryzer.Function\Weatheryzer.Function.csproj", "{19A7348B-78EF-43E3-BCEF-BAFD9BF9E4BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{EE7C7FB1-42F8-4818-85D4-0D6375E5DDEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE7C7FB1-42F8-4818-85D4-0D6375E5DDEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE7C7FB1-42F8-4818-85D4-0D6375E5DDEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19A7348B-78EF-43E3-BCEF-BAFD9BF9E4BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19A7348B-78EF-43E3-BCEF-BAFD9BF9E4BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19A7348B-78EF-43E3-BCEF-BAFD9BF9E4BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19A7348B-78EF-43E3-BCEF-BAFD9BF9E4BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
