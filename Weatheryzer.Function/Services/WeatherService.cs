@@ -5,13 +5,14 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Polly;
 using Weatheryzer.Function.Options;
+using Weatheryzer.Function.Services.Interfaces;
 
 namespace Weatheryzer.Function.Services;
 public class WeatherService(
     HttpClient httpClient,
     ILogger<IWeatherService> logger,
     IOptions<WeatherApiOptions> weatherApiOptions,
-    RetryPolicyService retryPolicyService)
+    IRetryPolicyService retryPolicyService)
     : IWeatherService
 {
     private readonly ILogger<IWeatherService> _logger = logger;

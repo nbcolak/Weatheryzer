@@ -5,6 +5,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Weatheryzer.Function.Options;
 using Weatheryzer.Function.Services;
+using Weatheryzer.Function.Services.Interfaces;
+
 IConfiguration configuration = null;
 
 var host = new HostBuilder()
@@ -29,7 +31,7 @@ var host = new HostBuilder()
         services.AddSingleton(x => 
             new BlobServiceClient(Environment.GetEnvironmentVariable("MyAzureStorageBlob"))
         );
-        services.AddSingleton<RetryPolicyService>();
+        services.AddSingleton<IRetryPolicyService,RetryPolicyService>();
     })
     .Build();
 
