@@ -6,7 +6,18 @@
                 "isEnabled": true,
                 "excludedTypes": "Request"
             },
+            "logLevel": {
+                "default": "Information",
+                "Function.QueueToPostgres": "Information"
+            },
             "enableLiveMetricsFilters": true
+        }
+    },
+    "extensions": {
+        "queues": {
+            "maxDequeueCount": 10,
+            "visibilityTimeout": "00:00:30"
         }
     }
 }
+

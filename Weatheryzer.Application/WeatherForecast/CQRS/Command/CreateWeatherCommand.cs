@@ -8,7 +8,11 @@ public record CreateWeatherCommand(
     string City,
     double TemperatureC,
     string Condition,
-    int Humidity,
-    double WindSpeed,
-    string AdditionalInfo
-) : IRequest<Response<int>>;
+    string? Data, 
+    int? Humidity = null, 
+    double? WindSpeed = null, 
+    string AdditionalInfo = ""
+) : IRequest<Response<int>>
+{
+
+}

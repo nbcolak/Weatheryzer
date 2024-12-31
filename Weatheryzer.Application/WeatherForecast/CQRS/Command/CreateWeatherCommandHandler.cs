@@ -28,7 +28,7 @@ public class CreateWeatherCommandHandler(IUnitOfWork unitOfWork) :
                 City = request.City,
                 TemperatureC = request.TemperatureC,
                 WeatherCondition = request.Condition,
-                Data = jsonData, // JSON burada ekleniyor
+                Data =request.Data?? jsonData, 
                 Timestamp = DateTime.UtcNow
             };
 
