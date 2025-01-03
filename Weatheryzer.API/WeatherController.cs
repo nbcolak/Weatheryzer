@@ -5,10 +5,9 @@ using Weatheryzer.Application.WeatherForecast.Queries;
 
 namespace Weatheryzer.API;
 
-
 [ApiController]
 [Route("api/[controller]")]
-public class WeatherController(IMediator mediator,ILogger<WeatherController> logger) : ControllerBase
+public class WeatherController(IMediator mediator, ILogger<WeatherController> logger) : ControllerBase
 {
     [HttpPost]
     public async Task<IActionResult> CreateWeather([FromBody] CreateWeatherCommand command)
@@ -20,12 +19,12 @@ public class WeatherController(IMediator mediator,ILogger<WeatherController> log
             var response = await mediator.Send(command);
             if (!response.Success)
             {
-                logger.LogWarning("CreateWeather failed with status code: {StatusCode} and message: {Message}", 
+                logger.LogWarning("CreateWeather failed with status code: {StatusCode} and message: {Message}",
                     response.StatusCode.Code, response.Message);
-                return StatusCode((int)response.StatusCode.Code, response.Message);
+                return StatusCode(response.StatusCode.Code, response.Message);
             }
 
-            logger.LogInformation("CreateWeather succeeded for city: {City} with response: {@Response}", 
+            logger.LogInformation("CreateWeather succeeded for city: {City} with response: {@Response}",
                 command.City, response);
 
             return CreatedAtAction(nameof(GetWeatherByCity), new { city = command.City }, response);
@@ -43,13 +42,11 @@ public class WeatherController(IMediator mediator,ILogger<WeatherController> log
         logger.LogInformation("Weather data requested.");
         try
         {
-            throw new Exception();
             var response = await mediator.Send(new GetWeatherByCityQuery(city));
 
             if (!response.Success)
-                return StatusCode((int)response.StatusCode.Code, response.Message);
+                return StatusCode(response.StatusCode.Code, response.Message);
             return Ok(response);
-
         }
         catch (Exception ex)
         {
