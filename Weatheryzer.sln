@@ -14,6 +14,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weatheryzer.Tests", "Weathe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weatheryzer.Function", "Weatheryzer.Function\Weatheryzer.Function.csproj", "{19A7348B-78EF-43E3-BCEF-BAFD9BF9E4BE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1457B86D-3B69-4779-B5D3-822E89FA92CF}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
